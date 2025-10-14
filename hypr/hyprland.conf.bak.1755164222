@@ -1,0 +1,103 @@
+# Learn how to configure Hyprland: https://wiki.hyprland.org/Configuring/
+
+# You're encouraged to tailor your Hyprland config in this file by adding or overwriting any settings.
+# But don't change anything that lives in ~/.local/share/omarchy, if you can help it!
+# Those files are overwritten when Omarchy is updated.
+
+# Change your personal monitor setup in here to keep the main config portable
+source = ~/.config/hypr/monitors.conf
+
+
+# Use defaults Omarchy defaults
+source = ~/.local/share/omarchy/default/hypr/autostart.conf
+source = ~/.local/share/omarchy/default/hypr/bindings/media.conf
+source = ~/.local/share/omarchy/default/hypr/bindings/tiling.conf
+source = ~/.local/share/omarchy/default/hypr/bindings/utilities.conf
+source = ~/.local/share/omarchy/default/hypr/envs.conf
+source = ~/.local/share/omarchy/default/hypr/looknfeel.conf
+source = ~/.local/share/omarchy/default/hypr/input.conf
+source = ~/.local/share/omarchy/default/hypr/windows.conf
+source = ~/.config/omarchy/current/theme/hyprland.conf
+
+
+workspace = 1, gapsin:1, gapsout:1,monitor:eDP-1
+workspace = 2, gapsin:1, gapsout:1,monitor:eDP-1
+workspace = 3, gapsin:1, gapsout:1,monitor:eDP-1
+workspace = 4, gapsin:1, gapsout:1,monitor:eDP-1
+workspace = 5, gapsin:1, gapsout:1,monitor:eDP-1
+
+workspace = 6, gapsin:1, gapsout:1,monitor:HDMI-A-1
+workspace = 7, gapsin:1, gapsout:1,monitor:HDMI-A-1
+workspace = 8, gapsin:1, gapsout:1,monitor:HDMI-A-1
+workspace = 9, gapsin:1, gapsout:1,monitor:HDMI-A-1
+#workspace = name:Docs_Secondary, gapsin:1, gapsout:1, monitor:HDMI-A-1,bordersize:0,persistent:true
+#workspace = 1-Web, gapsin:1, gapsout:1, monitor:eDP-1,bordersize:1,persistent:true,default:true
+#workspace = 2-Code, gapsin:1, gapsout:1, monitor:eDP-1,bordersize:1,persistent:true
+#workspace = name:AI, gapsin:1, gapsout:1, monitor:eDP-1,bordersize:0,persistent:true
+#workspace = name:Docs, gapsin:1, gapsout:1, monitor:eDP-1,bordersize:0,persistent:true
+#workspace = name:Other, gapsin:1, gapsout:1, monitor:eDP-1,bordersize:0,persistent:true
+
+#workspace = 6-Web_2nd, gapsin:1, gapsout:1, monitor:HDMI-A-1,bordersize:1,persistent:true,default:true
+#workspace = 7-Code_2nd, gapsin:1, gapsout:1, monitor:HDMI-A-1,bordersize:1,persistent:true
+
+
+# Application bindings
+$terminal = uwsm app -- alacritty
+$browser = uwsm app -- chromium --new-window --ozone-platform=wayland
+$webapp = $browser --app
+
+bind = SUPER, return, exec, $terminal
+bind = SUPER, F, exec, uwsm app -- nautilus --new-window
+bind = SUPER, B, exec, $browser
+bind = SUPER, M, exec, uwsm app -- spotify
+bind = SUPER, N, exec, $terminal -e nvim
+bind = SUPER, T, exec, $terminal -e btop
+bind = SUPER SHIFT, D, exec, $terminal -e lazydocker
+bind = SUPER, C, exec, uwsm app -- code
+bind = SUPER, O, exec, uwsm app -- obsidian -disable-gpu
+bind = SUPER, slash, exec, uwsm app -- 1password
+
+bind = SUPER, A, exec, $webapp="https://gemini.google.com/app"
+bind = SUPER SHIFT, A, exec, $webapp="https://claude.ai/new"
+bind = SUPER, G, exec, $webapp="https://gmail.com/"
+bind = SUPER, Y, exec, $webapp="https://youtube.com/"
+bind = SUPER SHIFT, G, exec, $webapp="https://web.whatsapp.com/"
+bind = SUPER, D, exec, $webapp="https://docs.google.com/document/u/0/"
+
+# Extra autostart processes
+# exec-once = uwsm app -- my-service
+
+# Extra env variables
+# Note: You must relaunch Hyprland after changing envs (use Super+Esc, then Relaunch)
+# env = MY_GLOBAL_ENV,setting
+
+# Control your input devices
+# See https://wiki.hypr.land/Configuring/Variables/#input
+input {
+  # Use multiple keyboard layouts and switch between them with Alt + Space
+  # kb_layout = us,dk
+  kb_layout = gb
+  kb_options = compose:caps # ,grp:alt_space_toggle
+
+  # Change speed of keyboard repeat
+  repeat_rate = 40
+  repeat_delay = 600
+
+  # Increase sensitity for mouse/trackpack (default: 0)
+  # sensitivity = 0.35
+
+  touchpad {
+    # Use natural (inverse) scrolling
+    # natural_scroll = true
+
+    # Use two-finger clicks for right-click instead of lower-right corner
+    # clickfinger_behavior = true
+
+    # Control the speed of your scrolling
+    scroll_factor = 0.4
+  }
+}
+
+# Scroll faster in the terminal
+windowrule = scrolltouchpad 1.5, class:Alacritty
+
