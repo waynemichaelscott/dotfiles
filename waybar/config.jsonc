@@ -20,43 +20,40 @@
     "cpu",
     "battery"
   ],
-  "hyprland/workspaces": {
-    "all-outputs": "false",
+  "hyprland/workspaces": {    
     "on-click": "activate",
-    "format": "{name}:{icon}",
+    "all-outputs": false,
+    "tooltip-format": "{name}",
+    "format": "{icon}:{name}",
     "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "󰧮",
-      "5": "",
-      "6": "",
-      "7": "",
-      "8": "",
-      "9": "󰧮",
-      "default": "",
-      "active": "󱓻"
-    },
-    "persistent-workspaces": {
-      "HDMI-A-1": [
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "eDP-1": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
+     /* "1": "󰭹 Comms",
+      "2": " Web",
+      "3": " Coding",
+      "4": " Terminal",
+      "5": "󰧮 Docs",
+      "6": " Media",
+      "7": " Other"                    
+      */                        
+        // --- Top Monitor (Glanceable stuff) ---
+        "1": "󰇮 Mail",    // Email or Slack/Discord
+        "2" : "󰭹 󰕧 Tunes + WhatsApps",
+        "3": " Dev",    // System monitoring/btop                
+        "4": " Dev",                              
+        "5": " Web",        
+        "6": " Web",
+        "7": " Other",
+        "8": " Other"                       
+    },   
+   "persistent-workspaces": {
+      "DP-1": [1,2,3,4,5, 6, 7,8]   // Only these appear on DP-1
+     // "HDMI-A-1": [ 1, 2, 3]         // Only these appear on HDMI-A-1
     }
   },
+ 
   "custom/omarchy": {
     "format": "<span font='omarchy'>\ue900</span>",
     "on-click": "omarchy-menu",
+    "on-click-right": "xdg-terminal-exec",
     "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
   },
   "custom/update": {
@@ -75,7 +72,7 @@
     "format": "{:L%A %H:%M}",
     "format-alt": "{:L%d %B W%V %Y}",
     "tooltip": false,
-    "on-click-right": "omarchy-cmd-tzupdate"
+    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
   },
   "network": {
     "format-icons": [
@@ -140,9 +137,11 @@
   "bluetooth": {
     "format": "",
     "format-disabled": "󰂲",
-    "format-connected": "",
+    "format-off": "󰂲",
+    "format-connected": "󰂱",
+    "format-no-controller": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "blueberry"
+    "on-click": "omarchy-launch-bluetooth"
   },
   "pulseaudio": {
     "format": "{icon}",
@@ -152,6 +151,7 @@
     "scroll-step": 5,
     "format-muted": "󰝟",
     "format-icons": {
+      "headphone": "",
       "default": [
         "",
         "",
@@ -173,6 +173,19 @@
   "custom/expand-icon": {
     "format": " ",
     "tooltip": false
+  },
+  "custom/voxtype": {
+    "exec": "omarchy-voxtype-status",
+    "return-type": "json",
+    "format": "{icon}",
+    "format-icons": {
+      "idle": "",
+      "recording": "󰍬",
+      "transcribing": "󰔟"
+    },
+    "tooltip": true,
+    "on-click-right": "omarchy-voxtype-config",
+    "on-click": "omarchy-voxtype-model"
   },
   "tray": {
     "icon-size": 12,

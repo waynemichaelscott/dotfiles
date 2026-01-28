@@ -1,0 +1,111 @@
+@import "../omarchy/current/theme/waybar.css";
+
+/* --- GLOBAL STYLING --- */
+* {
+  background-color: @background;
+  color: @foreground;
+  border: none;
+  border-radius: 0;
+  
+  /* Increased from 0 to 30px to make the bar taller */
+  min-height: 30px; 
+  
+  /* Increased from 12px to 14px for better readability */
+  font-family: 'JetBrainsMono Nerd Font Mono';
+  font-size: 14px; 
+}
+
+/* --- REGULAR ACTIVE WORKSPACE --- */
+/* 1. Base style for ALL workspace buttons */
+#workspaces button {
+    all: initial; 
+    background-color: transparent;
+    color: #6e738d;
+    font-family: 'JetBrainsMono Nerd Font Mono'; 
+    font-size: 12px;
+    padding: 0px 10px;
+    margin: 3px 4px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+/* 2. Style for Active Workspace - Forced Priority */
+window#waybar #workspaces button.active {
+    background-color: #a6f7ba;
+    color: #11111b;
+}
+
+/* 3. Style for Icons/Labels inside Active Workspace */
+window#waybar #workspaces button.active label,
+window#waybar #workspaces button.active * {
+    color: #11111b;
+    background-color: transparent;
+}
+
+/* 4. Occupied (not active) */
+#workspaces button.occupied {
+    color: #b8c0e0;
+}
+/* --- WORKSPACES BLOCK END --- */
+
+#cpu,
+#battery,
+#pulseaudio,
+#custom-omarchy,
+#custom-screenrecording-indicator,
+#custom-update {
+  min-width: 12px;
+  margin: 0 7.5px;
+}
+
+#tray {
+  margin-right: 16px;
+}
+
+#bluetooth {
+  margin-right: 17px;
+}
+
+#network {
+  margin-right: 13px;
+}
+
+#custom-expand-icon {
+  margin-right: 18px;
+}
+
+tooltip {
+  padding: 2px;
+}
+
+#custom-update {
+  font-size: 10px;
+}
+
+#clock {
+  margin-left: 5px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+#custom-screenrecording-indicator {
+  min-width: 12px;
+  margin-left: 5px;
+  font-size: 10px;
+  padding-bottom: 1px;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #a55555;
+}
+
+#custom-voxtype {
+  min-width: 12px;
+  margin: 0 0 0 7.5px;
+}
+
+#custom-voxtype.recording {
+  color: #a55555;
+}
