@@ -8,9 +8,6 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-# Load nvm if available
-[[ -f /usr/share/nvm/init-nvm.sh ]] && source /usr/share/nvm/init-nvm.sh
-
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -141,6 +138,9 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export ANDROID_AVD_HOME="$HOME/.config/.android/avd"
 
 export PATH=$PATH:$HOME/.maestro/bin
+
+# Load nvm if available (after oh-my-zsh to avoid console output during instant prompt)
+[[ -f /usr/share/nvm/init-nvm.sh ]] && source /usr/share/nvm/init-nvm.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
