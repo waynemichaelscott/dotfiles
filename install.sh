@@ -31,6 +31,7 @@ SYMLINKS=(
 # Shared files to symlink into $HOME (format: "source:destination" relative to ~/)
 HOME_SYMLINKS=(
     "zshrc:.zshrc"
+    "p10k.zsh:.p10k.zsh"
 )
 
 # Host-specific files (relative to hosts/<hostname>/)
