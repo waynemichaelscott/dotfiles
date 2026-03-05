@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(hyprctl reload:*)",
+      "Bash(pkill:*)",
+      "Bash(hyprctl dispatch:*)"
+    ]
+  }
+}
