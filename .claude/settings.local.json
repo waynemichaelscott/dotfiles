@@ -3,7 +3,10 @@
     "allow": [
       "Bash(hyprctl reload:*)",
       "Bash(pkill:*)",
-      "Bash(hyprctl dispatch:*)"
+      "Bash(hyprctl dispatch:*)",
+      "Bash(echo:*)",
+      "Bash(git -C /home/wayne/src/dotfiles status --porcelain)",
+      "Bash(hyprctl monitors:*)"
     ]
   }
 }
