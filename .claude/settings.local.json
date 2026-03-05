@@ -6,7 +6,8 @@
       "Bash(hyprctl dispatch:*)",
       "Bash(echo:*)",
       "Bash(git -C /home/wayne/src/dotfiles status --porcelain)",
-      "Bash(hyprctl monitors:*)"
+      "Bash(hyprctl monitors:*)",
+      "Skill(omarchy)"
     ]
   }
 }

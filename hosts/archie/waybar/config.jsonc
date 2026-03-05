@@ -3,7 +3,7 @@
   "layer": "top",
   "position": "top",
   "spacing": 0,
-  "height": 22,
+  "height": 20,
   "modules-left": [
     "custom/omarchy",
     "hyprland/workspaces"
@@ -13,11 +13,7 @@
     "custom/update"
   ],
   "modules-right": [
-    "group/tray-expander",
-    "bluetooth",
-    "network",
-    "pulseaudio",
-    "cpu",
+    "group/status-expander",
     "battery"
   ],
   "hyprland/workspaces": {
@@ -46,11 +42,10 @@
       "3": " Dev ", // System monitoring/btop                 
       "4": "󰇮 Mail", // Email or Slack/Discord
       "5": "󰭹 󰕧 Tunes + WhatsApps",
-      "6": " Other",
-      "7": " Other"
+      "6": " Other"
     },
     "persistent-workspaces": {
-      "DP-1": [
+      "eDP-1": [
         1,
         2,
         3,
@@ -100,7 +95,6 @@
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
-    "spacing": 1,
     "on-click": "alacritty --class=Impala -e impala"
   },
   "battery": {
@@ -179,6 +173,25 @@
       "custom/expand-icon",
       "tray"
     ]
+  },
+  "group/status-expander": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 400,
+      "children-class": "status-group-item"
+    },
+    "modules": [
+      "custom/status-icon",
+      "tray",
+      "bluetooth",
+      "network",
+      "pulseaudio",
+      "cpu"
+    ]
+  },
+  "custom/status-icon": {
+    "format": "󰍜",
+    "tooltip-format": "System Status"
   },
   "custom/expand-icon": {
     "format": " ",
