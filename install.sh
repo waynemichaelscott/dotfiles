@@ -15,7 +15,6 @@
 # Shared files/directories to symlink (relative to this dotfiles directory)
 # Format: "source:destination" where destination is relative to ~/.config/
 SYMLINKS=(
-    "waybar/style.css:waybar/style.css"
     "hypr/bindings.conf:hypr/bindings.conf"
     "hypr/looknfeel.conf:hypr/looknfeel.conf"
     "hypr/autostart.conf:hypr/autostart.conf"
@@ -26,6 +25,9 @@ SYMLINKS=(
     "hypr/hyprsunset.conf:hypr/hyprsunset.conf"
     "hypr/scripts:hypr/scripts"
     "hypr/input.conf:hypr/input.conf"
+    "alacritty:alacritty"
+    "kitty:kitty"
+    "ghostty:ghostty"
 )
 
 # Shared files to symlink into $HOME (format: "source:destination" relative to ~/)
@@ -38,6 +40,7 @@ HOME_SYMLINKS=(
 HOST_SYMLINKS=(
     "hypr/monitors.conf:hypr/monitors.conf"
     "waybar/config.jsonc:waybar/config.jsonc"
+    "waybar/style.css:waybar/style.css"
 )
 
 # =============================================================================

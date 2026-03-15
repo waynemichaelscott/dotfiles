@@ -77,7 +77,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode zsh-autosuggestions zsh-syntax-highlighting history-substring-search sudo z copyfile copypath fzf web-search extract docker docker-compose npm yarn kubectl)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting history-substring-search sudo z copyfile copypath fzf web-search extract docker docker-compose npm yarn kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -129,8 +129,8 @@ alias lt='eza --tree --icons --level=2'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-export ANDROID_HOME=$HOME/Android/Sdk
-export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+export ANDROID_HOME=$HOME/Desktop/Android/Sdk
+export ANDROID_SDK_ROOT=$HOME/Desktop/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/tools

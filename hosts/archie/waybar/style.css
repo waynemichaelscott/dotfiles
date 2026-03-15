@@ -1,0 +1,124 @@
+@import "../omarchy/current/theme/waybar.css";
+
+/* --- GLOBAL STYLING --- */
+* {
+  background-color: @background;
+  color: @foreground;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: 'JetBrainsMono Nerd Font Mono';
+  font-size: 12px;
+}
+
+/* --- REGULAR ACTIVE WORKSPACE --- */
+/* 1. Base style for ALL workspace buttons */
+#workspaces button {
+    all: initial;
+    background-color: transparent;
+    color: #6e738d;
+    font-family: 'JetBrainsMono Nerd Font Mono';
+    font-size: 11px;
+    padding: 0px 6px;
+    margin: 2px 3px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+/* 2. Style for Active Workspace - Forced Priority */
+window#waybar #workspaces button.active {
+    background-color: #a6f7ba;
+    color: #11111b;
+}
+
+/* 3. Style for Icons/Labels inside Active Workspace */
+window#waybar #workspaces button.active label,
+window#waybar #workspaces button.active * {
+    color: #11111b;
+    background-color: transparent;
+}
+
+/* 4. Occupied (not active) */
+#workspaces button.occupied {
+    color: #b8c0e0;
+}
+/* --- WORKSPACES BLOCK END --- */
+
+#cpu,
+#battery,
+#pulseaudio,
+#custom-omarchy,
+#custom-screenrecording-indicator,
+#custom-update {
+  min-width: 10px;
+  margin: 0 5px;
+}
+
+#tray {
+  margin-right: 10px;
+}
+
+#bluetooth {
+  margin-right: 10px;
+}
+
+#network {
+  margin-right: 8px;
+}
+
+#custom-expand-icon {
+  margin-right: 12px;
+}
+
+tooltip {
+  padding: 2px;
+}
+
+#custom-update {
+  font-size: 9px;
+}
+
+#clock {
+  margin-left: 4px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+#custom-screenrecording-indicator {
+  min-width: 10px;
+  margin-left: 4px;
+  font-size: 9px;
+  padding-bottom: 1px;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #a55555;
+}
+
+#custom-voxtype {
+  min-width: 10px;
+  margin: 0 0 0 5px;
+}
+
+#custom-voxtype.recording {
+  color: #a55555;
+}
+
+/* Status drawer group */
+#group-status-expander {
+  margin: 0;
+  padding: 0;
+}
+
+.status-group-item {
+  margin: 0 4px;
+}
+
+#custom-status-icon {
+  margin: 0 5px;
+  color: #b8c0e0;
+  font-size: 13px;
+  min-width: 13px;
+}
