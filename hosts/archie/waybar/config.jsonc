@@ -190,7 +190,7 @@
     ]
   },
   "custom/status-icon": {
-    "format": "󰍜",
+    "format": "≡",
     "tooltip-format": "System Status"
   },
   "custom/expand-icon": {
