@@ -28,12 +28,14 @@ SYMLINKS=(
     "alacritty:alacritty"
     "kitty:kitty"
     "ghostty:ghostty"
+    "backgrounds:omarchy/current/theme/backgrounds"
 )
 
 # Shared files to symlink into $HOME (format: "source:destination" relative to ~/)
 HOME_SYMLINKS=(
     "zshrc:.zshrc"
     "p10k.zsh:.p10k.zsh"
+    "tmux.conf:.tmux.conf"
 )
 
 # Host-specific files (relative to hosts/<hostname>/)

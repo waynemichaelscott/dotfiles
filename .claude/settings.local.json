@@ -7,7 +7,20 @@
       "Bash(echo:*)",
       "Bash(git -C /home/wayne/src/dotfiles status --porcelain)",
       "Bash(hyprctl monitors:*)",
-      "Skill(omarchy)"
+      "Skill(omarchy)",
+      "Bash(hyprctl layers:*)",
+      "Bash(journalctl:*)",
+      "Bash(hyprctl systeminfo:*)",
+      "Bash(mkdir:*)",
+      "Bash(ln:*)",
+      "Bash(tmux -f /home/wayne/.tmux.conf start-server ; kill-server)",
+      "Bash(find:*)",
+      "Bash(done)",
+      "Bash(python3:*)",
+      "Bash(cat:*)",
+      "Bash(/home/wayne/src/dotfiles/install.sh:*)",
+      "Bash(omarchy-restart-waybar)",
+      "Bash(hyprctl clients:*)"
     ]
   }
 }

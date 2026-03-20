@@ -25,24 +25,22 @@
       /* "1": "󰭹 Comms",
       "2": " Web",
       "3": " Coding",
-      "4": " Terminal",
+      "4": " Dev",
       "5": "󰧮 Docs",
-      "6": " Media",
       "7": " Other"                    
       */
       // "1": "󰇮 Mail",    // Email or Slack/Discord
       // "2" : "󰭹 󰕧 Tunes + WhatsApps",
       // "3": " Web ",    // System monitoring/btop                
-      // "4": " MyADHDTracker ",    // System monitoring/btop                
+      // "4": " Dev",    // System monitoring/btop                
       // "5": " MyADHDTracker",                              
       // "6": " DomusVesta",        
       // "7": " DomuVesta",
       "1": " Web ",
       "2": " Dev ", // System monitoring/btop                 
       "3": " Dev ", // System monitoring/btop                 
-      "4": "󰇮 Mail", // Email or Slack/Discord
-      "5": "󰭹 󰕧 Tunes + WhatsApps",
-      "6": " Other"
+      "4": " Dev",
+      "5": "󰇮 Comms"
     },
     "persistent-workspaces": {
       "eDP-1": [
@@ -50,8 +48,7 @@
         2,
         3,
         4,
-        5,
-        6
+        5
       ]
     }
   },
