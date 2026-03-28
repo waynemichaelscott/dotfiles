@@ -28,7 +28,6 @@ SYMLINKS=(
     "alacritty:alacritty"
     "kitty:kitty"
     "ghostty:ghostty"
-    "backgrounds:omarchy/current/theme/backgrounds"
 )
 
 # Shared files to symlink into $HOME (format: "source:destination" relative to ~/)
@@ -41,6 +40,7 @@ HOME_SYMLINKS=(
 # Host-specific files (relative to hosts/<hostname>/)
 HOST_SYMLINKS=(
     "hypr/monitors.conf:hypr/monitors.conf"
+    "hypr/chrome.conf:hypr/chrome.conf"
     "waybar/config.jsonc:waybar/config.jsonc"
     "waybar/style.css:waybar/style.css"
 )
@@ -143,6 +143,17 @@ for entry in "${HOME_SYMLINKS[@]}"; do
     dest="${entry#*:}"
     link_entry "$DOTFILES_DIR/$src" "$HOME/$dest" "$src"
 done
+
+# Symlink backgrounds into omarchy's user backgrounds dir for the current theme
+echo ""
+echo "--- Omarchy backgrounds ---"
+THEME_NAME_FILE="$CONFIG_DIR/omarchy/current/theme.name"
+if [[ -f "$THEME_NAME_FILE" ]]; then
+    THEME_NAME="$(cat "$THEME_NAME_FILE")"
+    link_entry "$DOTFILES_DIR/backgrounds" "$CONFIG_DIR/omarchy/backgrounds/$THEME_NAME" "backgrounds (theme: $THEME_NAME)"
+else
+    echo "SKIP: backgrounds (no theme found at $THEME_NAME_FILE)"
+fi
 
 echo ""
 if [[ "$backup_created" == true ]]; then

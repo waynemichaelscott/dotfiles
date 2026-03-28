@@ -20,7 +20,20 @@
       "Bash(cat:*)",
       "Bash(/home/wayne/src/dotfiles/install.sh:*)",
       "Bash(omarchy-restart-waybar)",
-      "Bash(hyprctl clients:*)"
+      "Bash(hyprctl clients:*)",
+      "Bash(compgen -c)",
+      "Bash(find ~/.config/omarchy/backgrounds/catppuccin -maxdepth 1 -type f \\\\\\(-name *.jpg -o -name *.jpeg -o -name *.png \\\\\\))",
+      "Bash(find -L ~/.config/omarchy/backgrounds/catppuccin -maxdepth 1 -type f \\\\\\(-name *.jpg -o -name *.jpeg -o -name *.png \\\\\\))",
+      "Read(//usr/**)",
+      "Read(//home/winne/.local/**)",
+      "Read(//etc/**)",
+      "Bash(elephant --help)",
+      "Bash(elephant listproviders:*)",
+      "WebSearch",
+      "WebFetch(domain:world.hey.com)",
+      "WebFetch(domain:linuxiac.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(./install.sh)"
     ]
   }
 }
