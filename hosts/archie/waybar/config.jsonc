@@ -43,11 +43,9 @@
       "5": "󰇮 Comms",
       "6": " Media",
       "7": " Other",
-      "9": "󰍹 Laptop"
     },
     "persistent-workspaces": {
-      "DP-1": [1, 2, 3, 4, 5, 6, 7],
-      "eDP-1": [9]
+      "eDP-1": [1, 2, 3, 4, 5, 6, 7]
     }
   },
   "custom/omarchy": {
