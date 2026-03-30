@@ -41,6 +41,7 @@ HOME_SYMLINKS=(
 HOST_SYMLINKS=(
     "hypr/monitors.conf:hypr/monitors.conf"
     "hypr/chrome.conf:hypr/chrome.conf"
+    "hypr/autostart.conf:hypr/autostart.conf"
     "waybar/config.jsonc:waybar/config.jsonc"
     "waybar/style.css:waybar/style.css"
 )
