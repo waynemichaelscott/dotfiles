@@ -77,7 +77,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting history-substring-search sudo z copyfile copypath fzf web-search extract docker docker-compose npm yarn kubectl)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting sudo z )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,12 +106,10 @@ alias lt='eza --tree --icons --level=2'
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
+# Show SSH indicator in terminal title (visible in Hyprland groupbar)
+if [[ -n $SSH_CONNECTION ]]; then
+  precmd() { print -Pn "\e]0;>>> SSH: %m - %~ <<<\a" }
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
