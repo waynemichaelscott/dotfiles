@@ -75,7 +75,22 @@
       "Bash(hyprctl getoption:*)",
       "Bash(pacman -Q libva-utils)",
       "Bash(vulkaninfo --summary)",
-      "Bash(sudo pacman:*)"
+      "Bash(sudo pacman:*)",
+      "Bash(/usr/bin/vainfo 2>&1)",
+      "Bash(pacman:*)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(grep:*)",
+      "Bash(python:*)",
+      "Bash(ls ~/.local/share/applications/*whatsapp* ~/.local/share/applications/*Whats*)",
+      "Bash(omarchy-menu-keybindings --print)",
+      "Bash(hyprctl binds:*)",
+      "Bash(jq -r \".[] | select\\(.key == \"\"Print\"\"\\) | \"\"\\\\\\(.modmask\\) \\\\\\(.key\\) \\\\\\(.dispatcher\\) \\\\\\(.arg\\)\"\"\")",
+      "Bash(omarchy-theme-current:*)",
+      "Bash(xdg-settings get:*)",
+      "Bash(walker --help)",
+      "Bash(walker --dmenu --placeholder \" Select Chrome Profile...\")",
+      "Bash(update-desktop-database ~/.local/share/applications/)",
+      "Bash(xdg-settings set:*)"
     ]
   }
 }

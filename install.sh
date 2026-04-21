@@ -35,6 +35,8 @@ HOME_SYMLINKS=(
     "zshrc:.zshrc"
     "p10k.zsh:.p10k.zsh"
     "tmux.conf:.tmux.conf"
+    ".claude/settings.json:.claude/settings.json"
+    ".claude/settings.local.json:.claude/settings.local.json"
 )
 
 # Host-specific files (relative to hosts/<hostname>/)
