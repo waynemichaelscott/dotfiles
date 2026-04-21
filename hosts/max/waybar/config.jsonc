@@ -6,10 +6,10 @@
   "height": 26,
   "modules-left": [
     "custom/omarchy",
-    "hyprland/workspaces",
-    "custom/scratchpad"
+    "hyprland/workspaces"
   ],
   "modules-center": [
+    "custom/scratchpad",
     "clock",
     "custom/update"
   ],
@@ -43,22 +43,23 @@
        // "6": " DomusVesta",        
        // "7": " DomuVesta",
       "1": " Web ",                      
-      "2": " Dev ",    // System monitoring/btop                 
-      "3": " Dev ",    // System monitoring/btop                 
-      "4": "󰇮 Mail",    // Email or Slack/Discord
-      "5" : "󰭹 󰕧 Tunes + WhatsApps",
-      "6": " Other",
-       "7": " Other"
+      "2": " 󰌃 JIRA ",    // JIRA board
+      "3": " Dev ",
+      "4": " Test",    // Testing in browser
+      "5": " 󰄪 Monitoring",
+      "6": "  Other",
+       "7": "  DomusVesta",
+      "8": "  MyADHDTracker"
     },
    "persistent-workspaces": {
-      "DP-1": [1, 2, 3, 4, 5, 6, 7],
-      "HDMI-A-1": [9]
+      "DP-1": [1, 2, 3, 4, 5, 6],
+      "HDMI-A-1": [7, 8]
     }
   },
  
   "custom/scratchpad": {
     "interval": 1,
-    "exec": "hyprctl monitors -j | jq -r 'if any(.[]; .specialWorkspace.name != \"\") then \"󰀼\" else \"\" end'",
+    "exec": "hyprctl monitors -j | jq -r 'if any(.[]; .specialWorkspace.name != \"\") then \"󰀼  Quick Draw\" else \"\" end'",
     "tooltip-format": "Scratchpad",
     "on-click": "hyprctl dispatch togglespecialworkspace scratchpad"
   },
