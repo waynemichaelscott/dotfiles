@@ -5,19 +5,26 @@
 | Shortcut | Action |
 | --- | --- |
 | Super + Enter | Terminal |
+| Super + Shift + Enter | Terminal (ungrouped) |
 | Super + Alt + Enter | Tmux |
-| Super + Shift + Enter | Browser |
 | Super + N | Neovim |
-| Super + Shift + N | Editor (default) |
 | Super + C | VSCode |
 | Super + F | File Manager (Nautilus) |
-| Super + Shift + F | File Manager (Omarchy) |
-| Super + Alt + Shift + F | File Manager (cwd) |
 | Super + M | Music (Spotify) |
 | Super + Shift + D | Lazydocker |
+| Super + Shift + G | Lazygit |
 | Super + Shift + T | Activity (btop) |
-| Super + Ctrl + T | Activity monitor |
 | Super + Shift + M | MacinCloud |
+
+## Chrome Profiles (Super + B, then...)
+
+| Key | Profile |
+| --- | --- |
+| A | ADHD |
+| D | Domus Vesta |
+| G | Gymstack |
+| W | Wayne |
+| Esc | Cancel |
 
 ## Web Apps (Super + A, then...)
 
@@ -49,28 +56,31 @@
 
 | Shortcut | Action |
 | --- | --- |
-| Super + C | Copy |
-| Super + V | Paste |
 | Super + X | Cut |
 | Super + Ctrl + V | Clipboard manager |
+
+Note: Super + C and Super + V are overridden (VSCode and toggle floating).
 
 ## Windows
 
 | Shortcut | Action |
 | --- | --- |
 | Super + W | Close window |
-| Super + T | Toggle floating/tiling |
-| Super + F | Fullscreen |
-| Super + Ctrl + F | Tiled fullscreen |
-| Super + Alt + F | Full width |
-| Super + P | Pseudo window |
-| Super + O | Pop window out (float & pin) |
+| Super + V | Toggle floating/tiling |
+| Super + Ctrl + F | Full screen |
+| Shift + F11 | Full screen (alt) |
+| Alt + F11 | Full width |
+| Super + P | Pop window out (float & pin) |
 | Super + J | Toggle split (horizontal/vertical) |
 | Super + Arrow | Move focus |
 | Super + Shift + Arrow | Swap windows |
+| Super + - / = | Resize window width |
+| Super + Shift + - / = | Resize window height |
 | Super + Shift + Home | Resize window (shrink height) |
 | Super + Shift + End | Resize window (grow height) |
 | Super + Mouse drag | Move/resize windows |
+| Alt + Tab | Cycle windows |
+| Ctrl + Alt + Delete | Close all windows |
 
 ## Workspaces
 
@@ -78,7 +88,6 @@
 | --- | --- |
 | Super + 1-9, 0 | Switch to workspace 1-10 |
 | Super + Shift + 1-9, 0 | Move window to workspace |
-| Super + Shift + Alt + 1-9, 0 | Move silently to workspace |
 | Super + Tab | Next workspace |
 | Super + Shift + Tab | Previous workspace |
 | Super + Ctrl + Tab | Former workspace |
@@ -91,6 +100,7 @@
 | Super + L | Toggle workspace layout |
 | Super + Ctrl + Shift + Right | Increase single-window ratio |
 | Super + Ctrl + Shift + Left | Decrease single-window ratio |
+| Super + Scroll | Cycle workspaces |
 
 ## Scratchpad
 
@@ -116,8 +126,6 @@
 | Super + [ | Previous window in group |
 | Super + Alt + Scroll | Next/previous in group |
 | Super + Alt + 1-5 | Jump to group window 1-5 |
-| Super + Alt + Tab | Navigate group |
-| Super + Ctrl + Left/Right | Move grouped focus |
 
 ## Screenshots & Recording
 
@@ -152,6 +160,10 @@
 | Super + Shift + Backspace | Toggle gaps |
 | Super + Ctrl + Backspace | Toggle square aspect |
 | Super + / | Cycle monitor scaling |
+| Super + Ctrl + S | Share menu |
+| Super + Ctrl + X | Toggle dictation |
+| Super + Ctrl + Alt + T | Show time |
+| Super + Ctrl + Alt + B | Show battery |
 
 ## Audio & Connectivity
 
@@ -160,6 +172,7 @@
 | Super + Ctrl + A | Audio controls |
 | Super + Ctrl + B | Bluetooth controls |
 | Super + Ctrl + W | Wifi controls |
+| Super + Ctrl + T | Activity monitor |
 | Super + Shift + Space | Toggle top bar |
 | Super + Ctrl + Space | Theme background menu |
 | Super + Shift + Ctrl + Space | Theme menu |
