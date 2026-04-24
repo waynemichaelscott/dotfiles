@@ -92,7 +92,27 @@
       "Bash(update-desktop-database ~/.local/share/applications/)",
       "Bash(xdg-settings set:*)",
       "Read(//home/winne/.config/omarchy/**)",
-      "Read(//home/winne/.config/**)"
+      "Read(//home/winne/.config/**)",
+      "Bash(voxtype config:*)",
+      "Bash(bash -c 'WIN=$\\(hyprctl activewindow -j\\); grim -g \"$\\(echo $WIN | jq -r \"\\\\\"\\\\\\(.at[0]\\),\\\\\\(.at[1]\\) \\\\\\(.size[0]\\)x\\\\\\(.size[1]\\)\\\\\"\" \\)\" - | wl-copy && notify-send \"Screenshot\" \"Active window copied to clipboard\"' 2>&1)",
+      "Bash(wl-paste:*)",
+      "Bash(ls ~/.config/kitty/*.conf)",
+      "Bash(~/.config/hypr/scripts/screenshot_active_window.sh)",
+      "Bash(grim:*)",
+      "Bash(hyprshot --help)",
+      "Bash(hyprshot -h)",
+      "Bash(ls -d ~/GDrive_*)",
+      "Bash(systemctl --user status rclone-domusvesta.service)",
+      "Bash(systemctl --user daemon-reload)",
+      "Bash(systemctl --user enable rclone-domusvesta.service rclone-domusvesta-development.service rclone-domusvesta-specs.service rclone-domusvesta-qa.service)",
+      "Bash(systemctl --user start rclone-domusvesta.service rclone-domusvesta-development.service rclone-domusvesta-specs.service rclone-domusvesta-qa.service)",
+      "Bash(systemctl --user status rclone-domusvesta.service rclone-domusvesta-development.service rclone-domusvesta-specs.service rclone-domusvesta-qa.service)",
+      "Bash(systemctl:*)",
+      "Bash(notify-send:*)",
+      "Bash(rclone bisync:*)",
+      "Bash(voxtype record:*)",
+      "Bash(pactl get-default-source:*)",
+      "Bash(DISPLAY= WAYLAND_DISPLAY= nvidia-smi)"
     ]
   }
 }

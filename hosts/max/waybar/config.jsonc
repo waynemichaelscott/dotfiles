@@ -27,36 +27,22 @@
     "tooltip-format": "{name}",
     "format": "{icon}:{name}",
     "format-icons": {
-     /* "1": "󰭹 Comms",
-      "2": " Web",
-      "3": " Coding",
-      "4": " Terminal",
-      "5": "󰧮 Docs",
-      "6": " Media",
-      "7": " Other"                    
-      */  
-        // "1": "󰇮 Mail",    // Email or Slack/Discord
-       // "2" : "󰭹 󰕧 Tunes + WhatsApps",
-       // "3": " Web ",    // System monitoring/btop                
-       // "4": " MyADHDTracker ",    // System monitoring/btop                
-       // "5": " MyADHDTracker",                              
-       // "6": " DomusVesta",        
-       // "7": " DomuVesta",
-      "1": " Web ",                      
-      "2": " 󰌃 JIRA ",    // JIRA board
-      "3": " Dev ",
-      "4": " Test",    // Testing in browser
-      "5": " 󰄪 Monitoring",
-      "6": "  Other",
-       "7": "  DomusVesta",
-      "8": "  MyADHDTracker"
+      "1": " Web ",
+      "2": " 󰌃 JIRA ",
+      "3": " Dev ",
+      "4": " Test (Local)",
+      "5": " Test (Staging)",
+      "6": " 󰄪 Monitoring",
+      "7": "  Other",
+      "8": "  DomusVesta",
+      "9": "  MyADHDTracker"
     },
    "persistent-workspaces": {
-      "DP-1": [1, 2, 3, 4, 5, 6],
-      "HDMI-A-1": [7, 8]
+      "DP-1": [1, 2, 3, 4, 5, 6, 7],
+      "HDMI-A-1": [8, 9]
     }
   },
- 
+
   "custom/scratchpad": {
     "interval": 1,
     "exec": "hyprctl monitors -j | jq -r 'if any(.[]; .specialWorkspace.name != \"\") then \"󰀼  Quick Draw\" else \"\" end'",
@@ -70,7 +56,7 @@
     "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
   },
   "custom/update": {
-    "format": "",
+    "format": "",
     "exec": "omarchy-update-available",
     "on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
     "tooltip-format": "Omarchy update available",
@@ -110,7 +96,7 @@
     "format": "{capacity}% {icon}",
     "format-discharging": "{icon}",
     "format-charging": "{icon}",
-    "format-plugged": "",
+    "format-plugged": "",
     "format-icons": {
       "charging": [
         "󰢜",
@@ -148,7 +134,7 @@
     }
   },
   "bluetooth": {
-    "format": "",
+    "format": "",
     "format-disabled": "󰂲",
     "format-off": "󰂲",
     "format-connected": "󰂱",
@@ -164,11 +150,11 @@
     "scroll-step": 5,
     "format-muted": "󰝟",
     "format-icons": {
-      "headphone": "",
+      "headphone": "",
       "default": [
-        "",
-        "",
-        ""
+        "",
+        "",
+        ""
       ]
     }
   },
@@ -184,7 +170,7 @@
     ]
   },
   "custom/expand-icon": {
-    "format": " ",
+    "format": " ",
     "tooltip": false
   },
   "custom/voxtype": {
