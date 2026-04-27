@@ -35,11 +35,12 @@
       "6": " 󰄪 Monitoring",
       "7": "  Other",
       "8": "  DomusVesta",
-      "9": "  MyADHDTracker"
+      "9": "  MyADHDTracker",
+      "10": "  10"
     },
    "persistent-workspaces": {
-      "DP-1": [1, 2, 3, 4, 5, 6, 7],
-      "HDMI-A-1": [8, 9]
+      "DP-1": [1, 2, 3, 4, 5, 6, 7, 10],
+      "HDMI-A-1": [8]
     }
   },
 
