@@ -112,7 +112,8 @@
       "Bash(rclone bisync:*)",
       "Bash(voxtype record:*)",
       "Bash(pactl get-default-source:*)",
-      "Bash(DISPLAY= WAYLAND_DISPLAY= nvidia-smi)"
+      "Bash(DISPLAY= WAYLAND_DISPLAY= nvidia-smi)",
+      "Bash(git *)"
     ]
   }
 }
