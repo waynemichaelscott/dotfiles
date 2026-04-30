@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Pick a git repo via fzf, then launch lazygit there.
+# If already inside a git working tree, skips the picker.
+
+if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+    exec lazygit
+fi
+
+SEARCH_PATHS=("$HOME/src" "$HOME/code" "$HOME/projects" "$HOME/work")
+
+REPO=$(
+    for p in "${SEARCH_PATHS[@]}"; do
+        [[ -d $p ]] && find "$p" -maxdepth 4 -type d -name .git -prune 2>/dev/null
+    done | sed 's|/\.git$||' | sort -u | fzf \
+        --prompt="lazygit > " \
+        --height=80% \
+        --reverse \
+        --preview="git -C {} log --oneline -10 2>/dev/null"
+)
+
+[[ -z $REPO ]] && exit 0
+
+cd "$REPO" && exec lazygit

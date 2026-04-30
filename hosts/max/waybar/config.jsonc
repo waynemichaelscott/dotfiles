@@ -27,20 +27,20 @@
     "tooltip-format": "{name}",
     "format": "{icon}:{name}",
     "format-icons": {
-      "1": " Web ",
-      "2": " 󰌃 JIRA ",
-      "3": " Dev ",
-      "4": " Test (Local)",
-      "5": " Test (Staging)",
-      "6": " 󰄪 Monitoring",
-      "7": "  Other",
-      "8": "  DomusVesta",
-      "9": "  MyADHDTracker",
-      "10": "  10"
+      "1": "  DomusVesta",
+      "2": "  MyADHDTracker",
+      "3": " Web ",
+      "4": " Dev ",
+      "5": " Test (Local)",
+      "6": " Test (Staging)",
+      "7": " Dev ",
+      "8": " Test ",
+      "9": "󰄪 Monitoring",
+      "10": " Terminal "
     },
    "persistent-workspaces": {
-      "DP-1": [1, 2, 3, 4, 5, 6, 7, 10],
-      "HDMI-A-1": [8, 9]
+      "HDMI-A-1": [1, 2],
+      "DP-1": [3, 4, 5, 6, 7, 8, 9, 10]
     }
   },
 
