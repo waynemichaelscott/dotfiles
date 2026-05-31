@@ -20,7 +20,6 @@ SYMLINKS=(
     "hypr/autostart.conf:hypr/autostart.conf"
     "hypr/hyprland.conf:hypr/hyprland.conf"
     "hypr/envs.conf:hypr/envs.conf"
-    "hypr/hypridle.conf:hypr/hypridle.conf"
     "hypr/hyprlock.conf:hypr/hyprlock.conf"
     "hypr/hyprsunset.conf:hypr/hyprsunset.conf"
     "hypr/scripts:hypr/scripts"
@@ -36,14 +35,12 @@ HOME_SYMLINKS=(
     "p10k.zsh:.p10k.zsh"
     "tmux.conf:.tmux.conf"
     ".claude/settings.json:.claude/settings.json"
-    ".claude/settings.local.json:.claude/settings.local.json"
 )
 
 # Host-specific files (relative to hosts/<hostname>/)
 HOST_SYMLINKS=(
     "hypr/monitors.conf:hypr/monitors.conf"
     "hypr/chrome.conf:hypr/chrome.conf"
-    "hypr/autostart.conf:hypr/autostart.conf"
     "hypr/window-rules.conf:hypr/window-rules.conf"
     "waybar/config.jsonc:waybar/config.jsonc"
     "waybar/style.css:waybar/style.css"
