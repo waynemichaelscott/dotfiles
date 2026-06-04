@@ -38,8 +38,9 @@
     "explanatory-output-style@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true
   },
+  "effortLevel": "high",
   "autoUpdatesChannel": "latest",
   "editorMode": "vim",
   "remoteControlAtStartup": false,
-  "effortLevel": "high"
+  "agentPushNotifEnabled": true
 }
