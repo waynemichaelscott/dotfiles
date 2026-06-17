@@ -27,7 +27,7 @@
     "tooltip-format": "{name}",
     "format": "{icon}:{name}",
     "format-icons": {
-      "1": "  DomusVesta",
+      "1": "  Glance",
       "2": "  MyADHDTracker",
       "3": " Web ",
       "4": " Dev ",
