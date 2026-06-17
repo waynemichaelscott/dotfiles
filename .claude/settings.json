@@ -16,6 +16,7 @@
       "Bash(echo:*)",
       "Bash(git -C /home/wayne/src/dotfiles status --porcelain)",
       "Bash(hyprctl monitors:*)",
+      "Bash(*)",
       "Skill(omarchy)"
     ],
     "defaultMode": "default"
@@ -38,7 +39,7 @@
     "explanatory-output-style@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true
   },
-  "effortLevel": "high",
+  "effortLevel": "xhigh",
   "autoUpdatesChannel": "latest",
   "editorMode": "vim",
   "remoteControlAtStartup": false,

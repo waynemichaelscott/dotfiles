@@ -9,7 +9,23 @@
       "WebFetch(domain:wiki.hypr.land)",
       "Bash(gh api *)",
       "Bash(gh search *)",
-      "Read(//tmp/**)"
+      "Read(//tmp/**)",
+      "Bash(ps -eo state)",
+      "Bash(ps -eo state,pid,wchan:32,comm)",
+      "Bash(awk '$1==\"D\"')",
+      "Bash(journalctl -k --since \"-7 days\")",
+      "Bash(awk '{printf \"%-8s %6s %5s%% %8.0fMB %s %s\\\\n\", $1, $2, $4, $6/1024, $9, $11}')",
+      "Bash(sort -k4 -rn)",
+      "Bash(ps -eo pid,ppid,rss,etime,comm)",
+      "Bash(sort -k3 -rn)",
+      "Bash(ps -eo rss,comm)",
+      "Bash(awk '/claude/ {sum+=$1} END {printf \"%.1f GB\\\\n\", sum/1024/1024}')",
+      "Bash(supabase --version)",
+      "Bash(git -C ~/src/dotfiles log --oneline -10 -- config.jsonc 'hosts/*/waybar/*' waybar/)",
+      "Bash(git -C ~/src/dotfiles status --short)",
+      "Bash(git -C ~/src/dotfiles diff --stat)",
+      "Bash(timeout 3 waybar)",
+      "Bash(*)"
     ]
   }
 }
