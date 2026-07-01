@@ -24,7 +24,10 @@
   "hyprland/workspaces": {
     "on-click": "activate",
     "all-outputs": false,
-    "format": "{name}"
+    "format": "{name}",
+    "persistent-workspaces": {
+      "HDMI-A-1": [1]
+    }
   },
 
   "custom/scratchpad": {
