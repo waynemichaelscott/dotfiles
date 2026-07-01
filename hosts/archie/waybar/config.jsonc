@@ -20,33 +20,7 @@
   "hyprland/workspaces": {
     "on-click": "activate",
     "all-outputs": false,
-    "tooltip-format": "{name}",
-    "format": "{icon}:{name}",
-    "format-icons": {
-      /* "1": "󰭹 Comms",
-      "2": " Web",
-      "3": " Coding",
-      "4": " Dev",
-      "5": "󰧮 Docs",
-      "7": " Other"                    
-      */
-      // "1": "󰇮 Mail",    // Email or Slack/Discord
-      // "2" : "󰭹 󰕧 Tunes + WhatsApps",
-      // "3": " Web ",    // System monitoring/btop                
-      // "4": " Dev",    // System monitoring/btop                
-      // "5": " MyADHDTracker",                              
-      // "6": " DomusVesta",        
-      // "7": " DomuVesta",
-      "1": " Web ",
-      "2": " 󰌃 JIRA ", // JIRA board
-      "3": " Dev ",
-      "4": " Test",
-      "5": " 󰄪 Monitoring",
-      "6": "  Other",
-    },
-    "persistent-workspaces": {
-      "eDP-1": [1, 2, 3, 4, 5, 6]
-    }
+    "format": "{name}"
   },
   "custom/scratchpad": {
     "interval": 1,
