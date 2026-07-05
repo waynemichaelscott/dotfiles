@@ -27,6 +27,7 @@ SYMLINKS=(
     "alacritty:alacritty"
     "kitty:kitty"
     "ghostty:ghostty"
+    "hyprland-autoname-workspaces:hyprland-autoname-workspaces"
 )
 
 # Shared files to symlink into $HOME (format: "source:destination" relative to ~/)

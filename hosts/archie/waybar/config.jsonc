@@ -20,6 +20,7 @@
   "hyprland/workspaces": {
     "on-click": "activate",
     "all-outputs": false,
+    "tooltip-format": "{name}",
     "format": "{name}"
   },
   "custom/scratchpad": {

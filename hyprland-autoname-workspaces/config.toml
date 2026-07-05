@@ -1,0 +1,113 @@
+version = "1.2.0"
+
+[format]
+dedup = true
+dedup_inactive_fullscreen = true
+delim = " "
+workspace = "{id}: {clients}"
+workspace_empty = "{id}"
+client = "<span size='large'>{icon}</span>"
+client_active = "<span size='large'><b>{icon}</b></span>"
+client_fullscreen = "[<span size='large'>{icon}</span>]"
+client_dup = "<span size='large'>{icon}</span>{counter_sup}"
+client_dup_active = "<span size='large'><b>{icon}</b></span>{counter_sup}"
+
+[class]
+"DEFAULT" = "{class}"
+
+# --- Terminals ---
+"(?i)alacritty" = "󰆍"
+"(?i)kitty" = "󰆍"
+"(?i)ghostty" = "󰆍"
+"(?i)foot" = "󰆍"
+"(?i)wezterm" = "󰆍"
+
+# --- Browsers ---
+"google-chrome" = "󰊤"
+"chrome-personal" = "󰊤 W"
+"chrome-adhd" = "󰊤 ADHD"
+"chrome-gymstack" = "󰊤 GS"
+"chrome-dv" = "󰊤 DV"
+"chrome-.*" = "󰊤"
+"(?i)firefox" = "󰈹"
+"(?i)tor" = "󰈹"
+"(?i)brave" = "󰖟"
+
+# --- Editors & Dev ---
+"(?i)code" = "󰨞"
+"(?i)cursor" = "󰨞"
+"(?i)neovide" = "󰊠"
+"(?i)zed" = "󰨞"
+"(?i)dbeaver" = "󰆼"
+"(?i)lazydocker" = "󰡨"
+"(?i)lazygit" = "󰊢"
+"(?i)opencode" = "󰨞"
+
+# --- Communication ---
+"(?i)slack" = "󰛋"
+"(?i)discord" = "󰙯"
+"(?i)telegram" = "󰔁"
+"(?i)signal" = "󰭹"
+"(?i)localsend" = "󰒍"
+
+# --- Media ---
+"(?i)spotify" = "󰓇"
+"(?i)vlc" = "󰕼"
+"(?i)mpv" = "󰐌"
+"(?i)imv" = "󰋩"
+"(?i)eog" = "󰋩"
+"(?i)loupe" = "󰋩"
+
+# --- Files & Documents ---
+"(?i)thunar" = "󰉋"
+"(?i)nautilus" = "󰉋"
+"(?i)nemo" = "󰉋"
+"(?i)evince" = "󰈦"
+"(?i)zathura" = "󰈦"
+"(?i)okular" = "󰈦"
+"(?i)libreoffice" = "󰈙"
+"(?i)typora" = "󰍔"
+"(?i)xournalpp" = "󰓈"
+
+# --- Notes & Knowledge ---
+"dev.omarchy.OmNote" = "󰎞"
+"(?i)obsidian" = "󰎞"
+
+# --- System & Utilities ---
+"(?i)btop" = "󰍛"
+"(?i)calculator" = "󰃬"
+"(?i)gnome-system-monitor" = "󰍛"
+"(?i)pavucontrol" = "󰕾"
+"(?i)wiremix" = "󰕾"
+"(?i)blueman" = "󰂯"
+"(?i)bluetui" = "󰂯"
+"(?i)nm-connection-editor" = "󰛳"
+"(?i)impala" = "󰛳"
+"(?i)satty" = "󰹑"
+"(?i)pinta" = "󰏘"
+"(?i)gimp" = "󰏘"
+"(?i)inkscape" = "󰏘"
+"(?i)zenity" = "󰀦"
+
+# --- Gaming ---
+"(?i)steam" = "󰓓"
+"(?i)retroarch" = "󰊴"
+"(?i)waydroid" = "󰀲"
+
+# --- Remote ---
+"(?i)freerdp" = "󰢹"
+"(?i)remmina" = "󰢹"
+"(?i)vncviewer" = "󰢹"
+"(?i)sshfs" = "󰢹"
+
+[class_active]
+DEFAULT = "<b>{icon}</b>"
+
+# WhatsApp web app gets its own icon
+[title_in_class."chrome-.*whatsapp.*"]
+".*" = "󰖣"
+
+[exclude]
+"" = "^$"
+"(?i)fcitx" = ".*"
+"(?i)xdg-desktop-portal" = ".*"
