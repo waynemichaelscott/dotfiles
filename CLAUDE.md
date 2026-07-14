@@ -23,7 +23,7 @@ After changing Hyprland configs: `SUPER+SHIFT+C` reloads the config, or `hyprctl
 - **Shared configs** (top-level `hypr/`, `waybar/style.css`): Symlinked to `~/.config/` on all machines. Things like keybindings, look-and-feel, autostart, env vars.
 - **Host-specific configs** (`hosts/<hostname>/`): Per-machine overrides for monitors, input devices, and waybar layout. Currently two hosts: `max` and `archie`.
 
-The split is defined by two arrays in `install.sh`: `SYMLINKS` (shared) and `HOST_SYMLINKS` (host-specific).
+The split is defined by arrays in `install.sh`: `SYMLINKS` (shared, into `~/.config/`), `HOME_SYMLINKS` (shared, into `~/`), `HOST_SYMLINKS` (host-specific, into `~/.config/`), and `HOST_HOME_SYMLINKS` (host-specific, into `~/` — for things outside `~/.config`, e.g. the `max` BT600 audio keep-alive systemd unit + `~/.local/bin` script).
 
 ### Hyprland Config Layering
 

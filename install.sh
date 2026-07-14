@@ -47,6 +47,13 @@ HOST_SYMLINKS=(
     "waybar/style.css:waybar/style.css"
 )
 
+# Host-specific files that live OUTSIDE ~/.config (systemd user units, scripts).
+# Source relative to hosts/<hostname>/, destination relative to ~/.
+HOST_HOME_SYMLINKS=(
+    "systemd/user/bt600-keepalive.service:.config/systemd/user/bt600-keepalive.service"
+    "local/bin/bt600-keepalive.sh:.local/bin/bt600-keepalive.sh"
+)
+
 # =============================================================================
 # Script logic below - no need to edit
 # =============================================================================
@@ -136,6 +143,15 @@ for entry in "${HOST_SYMLINKS[@]}"; do
     src="${entry%%:*}"
     dest="${entry#*:}"
     link_entry "$HOST_DIR/$src" "$CONFIG_DIR/$dest" "hosts/$HOSTNAME/$src"
+done
+
+# Symlink host-specific files that live outside ~/.config (systemd units, scripts)
+echo ""
+echo "--- Host-specific home configs ($HOSTNAME) ---"
+for entry in "${HOST_HOME_SYMLINKS[@]}"; do
+    src="${entry%%:*}"
+    dest="${entry#*:}"
+    link_entry "$HOST_DIR/$src" "$HOME/$dest" "hosts/$HOSTNAME/$src"
 done
 
 # Symlink home-directory files

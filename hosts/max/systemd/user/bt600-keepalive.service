@@ -1,0 +1,26 @@
+[Unit]
+Description=Keep the Plantronics BT600 audio link awake
+Documentation=https://github.com/tsowell/wiremix
+# Why this exists: the BT600 USB dongle downgrades its wireless link to the
+# headset (quieter, lower quality) when the audio stream looks idle. Holding a
+# silent capture open on the sink monitor keeps the device continuously driven,
+# so playback stays loud and full quality. Diagnosed 2026-07-14: a running
+# mixer (wiremix) accidentally did this via its level meters.
+After=pipewire.service wireplumber.service
+Wants=pipewire.service
+PartOf=pipewire.service
+# Never stop retrying if the headset is unplugged/off; resume when it returns.
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+# Playback-gated: only holds the BT600 link awake while audio is actually
+# playing (plus a short grace period), so the headset battery is not drained
+# while idle. See the script header for details.
+ExecStart=%h/.local/bin/bt600-keepalive.sh
+Restart=always
+RestartSec=5
+Nice=15
+
+[Install]
+WantedBy=pipewire.service
