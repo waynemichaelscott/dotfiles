@@ -1,0 +1,19 @@
+[Unit]
+Description=Warn (desktop toast) on high memory pressure before the desktop freezes
+# Why this exists: this box has frozen / had apps OOM-killed with no warning
+# under heavy dev load. This fires a mako toast while PSI memory-stall pressure
+# is still building, so there is time to close something before a kill. Pairs
+# with systemd-oomd, which acts but never warns. See the script header.
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/mem-pressure-warn.sh
+Restart=always
+RestartSec=5
+# This is a courtesy watchdog; it must never itself add to memory pressure.
+Nice=19
+
+[Install]
+WantedBy=graphical-session.target

@@ -36,6 +36,9 @@ HOME_SYMLINKS=(
     "p10k.zsh:.p10k.zsh"
     "tmux.conf:.tmux.conf"
     ".claude/settings.json:.claude/settings.json"
+    # Memory-pressure warning toast (both hosts): PSI watcher + user service
+    "systemd/user/mem-pressure-warn.service:.config/systemd/user/mem-pressure-warn.service"
+    "local/bin/mem-pressure-warn.sh:.local/bin/mem-pressure-warn.sh"
 )
 
 # Host-specific files (relative to hosts/<hostname>/)
