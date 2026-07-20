@@ -39,6 +39,11 @@ HOME_SYMLINKS=(
     # Memory-pressure warning toast (both hosts): PSI watcher + user service
     "systemd/user/mem-pressure-warn.service:.config/systemd/user/mem-pressure-warn.service"
     "local/bin/mem-pressure-warn.sh:.local/bin/mem-pressure-warn.sh"
+    # Chrome profile chooser: link handler .desktop (points at the host-specific
+    # ~/.local/bin/chrome-profile-chooser.sh symlinked via HOST_HOME_SYMLINKS).
+    # After first install, register it as the browser:
+    #   xdg-settings set default-web-browser chrome-profile-chooser.desktop
+    "local/share/applications/chrome-profile-chooser.desktop:.local/share/applications/chrome-profile-chooser.desktop"
 )
 
 # Host-specific files (relative to hosts/<hostname>/)
@@ -55,6 +60,8 @@ HOST_SYMLINKS=(
 HOST_HOME_SYMLINKS=(
     "systemd/user/bt600-keepalive.service:.config/systemd/user/bt600-keepalive.service"
     "local/bin/bt600-keepalive.sh:.local/bin/bt600-keepalive.sh"
+    # Chrome profile chooser script (profile numbers are host-specific)
+    "local/bin/chrome-profile-chooser.sh:.local/bin/chrome-profile-chooser.sh"
 )
 
 # =============================================================================

@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Chrome Profile Chooser
+GenericName=Web Browser
+Comment=Pick a Chrome profile (Walker dropdown) when opening a link
+# Absolute path: .desktop Exec does not expand ~ or $HOME. The target is a
+# host-specific symlink created by install.sh at ~/.local/bin/.
+Exec=/home/winne/.local/bin/chrome-profile-chooser.sh %U
+Terminal=false
+Icon=google-chrome
+StartupNotify=true
+Categories=Network;WebBrowser;
+MimeType=x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/about;x-scheme-handler/unknown;text/html;
