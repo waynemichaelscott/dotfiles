@@ -44,8 +44,9 @@ case "${choice:0:1}" in
   *) exit 0 ;;
 esac
 
-# No --new-window: if the profile is already running the link opens as a new
-# tab there (what you want); if not, Chrome spawns a fresh window and --class
-# gives it the right WM class for Waybar icons.
+# --new-window: always open the link in a fresh window for the chosen profile,
+# even if that profile is already running, rather than adding a tab to an
+# existing window. --class gives the new window the right WM class for Waybar
+# icons (per-profile mapping via hyprland-autoname-workspaces).
 exec setsid uwsm-app -- google-chrome-stable \
-  --profile-directory="$profile" --class="$class" "${urls[@]}"
+  --profile-directory="$profile" --class="$class" --new-window "${urls[@]}"
